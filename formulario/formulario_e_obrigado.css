@@ -1,0 +1,208 @@
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Configuração do corpo da página */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(0, 1, 83);
+}
+
+/* Configuração do menu superior */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: snow;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Configuração dos links */
+a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    padding: 1%;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Configuração da seção principal */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background: slategrey;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+section h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: white;
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Configuração do formulário */
+form, .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: border-radius 0.5s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-radius: 16px;
+}
+
+/* Configuração do botão */
+form button {
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: rgb(15, 0, 146);
+    border: 2px solid rgb(22, 0, 218);
+    color: white;
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+
+form button:hover {
+    background: rgb(64, 93, 255);
+    border-radius: 16px;
+}
+
+.endereco {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Página de obrigado */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(0, 1, 83);
+    text-align: center;
+}
+
+.text,
+.paragrafo {
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* Botões da página de obrigado */
+.btn,
+.home {
+    color: black;
+    background: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 45px;
+    border: 2px solid white;
+    transition: 0.5s;
+    margin: 1%;
+}
+
+.btn:hover,
+.home:hover {
+    color: slategrey;
+    border-radius: 16px;
+}
+
+footer {
+    padding: 10%;
+    font-weight: normal;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* Responsividade */
+@media(min-width: 768px) {
+    a {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    section {
+        margin-top: 10%;
+        text-align: justify;
+    }
+
+    section h1 {
+        font-size: 40px;
+    }
+
+    section p {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1500px) {
+    a {
+        font-size: 18px;
+        padding: 0.5%;
+    }
+
+    section {
+        margin-top: 5%;
+        text-align: justify;
+    }
+
+    section h1 {
+        font-size: 40px;
+    }
+
+    section p {
+        font-size: 20px;
+    }
+}

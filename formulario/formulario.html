@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação</title>
+    <link rel="stylesheet" href="formulario_e_obrigado.css">
+    <link rel="icon" type="Image/x-icon" href="/img/Logo.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <a href="../pagina_inicial.html">INÍCIO</a>
+                <a href="../Sobre_o_LARC/sobre_o_larc.html">SOBRE O LARC</a>
+                <a href="../Contatos/contatos.html">CONTATOS</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+
+        <!-- FCabeçalho do Formulário -->
+        <h1>Solicitação</h1>
+        <p>Preencha os campos abaixo para entrar em contato.
+            Inclua seu nome, bairro e uma descrição clara da sua solicitação. Seja objetivo e respeitoso. Caso queira
+            retorno, informe um telefone ou e-mail.</p>
+
+        <!-- Estrutura do Formulário -->
+        <form action="https://formsubmit.co/felipeduarte0906@hotmail.com" method="POST">
+
+            <label>Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"><br>
+
+            <label>Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu E-mail" autocomplete=""><br>
+
+            <!-- Automatização do CEP -->
+            <div class="formulario">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" maxlength="9" onblur="buscarCEP()" placeholder="Digite seu CEP"
+                    required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" readonly required>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" readonly required>
+            </div>
+
+            <!-- Resto do formulário -->
+            <label>Mensagem:</label>
+            <textarea name="message" cols="30" rows="10" required
+                placeholder="Digite sua mensagem e o endereço do local"></textarea>
+
+            <!-- Botão -->
+            <button type="submit">Enviar</button>
+
+            <!-- Funções -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/denuncia/obrigado.html">
+            <input type="hidden" name="_subject" value="Nova solicitação!">
+        </form>
+
+        <!-- Rodapé -->
+        <footer>Copyright&copy; Felipe de Souza Duarte. Todos os direitos reservados.</footer>
+    </section>
+
+    <script src="formulario.js"></script>
+</body>
+
+</html>
